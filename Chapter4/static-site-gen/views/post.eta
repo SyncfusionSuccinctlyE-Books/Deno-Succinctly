@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="assets/styles/style.css">
+      <title><%= it.title | it.blog %></title>
+   </head>
+   <body>
+      <header>
+         <h1><%= it.blog %></h1>
+         <p class="slug"><%= it.summary %></p>
+         <a href="index.html">Home</a>
+         <hr />
+      </header>
+      <article>
+         <h2><%= it.title%></h2>
+         <p class="smalltext">Posted on <%= it.date.toDateString() %> by <%= it.author %></p>
+         <div><%~ it.content %></div>
+         <a href="index.html">&lt;&lt;&nbsp;Back</a>
+      </article>
+      <footer>
+         <p class="smalltext"><%= it.copyright %></p>
+      </footer>
+   </body>
+</html>

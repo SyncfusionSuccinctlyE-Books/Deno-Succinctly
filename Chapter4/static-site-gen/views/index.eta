@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="assets/styles/style.css">
+      <title><%= it.blog %></title>
+   </head>
+   <body>
+      <header>
+         <h1><%= it.blog %></h1>
+         <p class="slug"><%= it.summary %></p>
+         <hr />
+      </header>
+      <div>
+         <% it.posts.forEach((post)=>{ %>
+         <div class="post">
+            <h2><a href="<%= post.url %>"><%= post.title %></a></h2>
+            <p class="smalltext">Posted on <%= post.date.toDateString() %> by <%= post.author %></p>
+            <p><%= post.description %></p>
+         </div>
+         <% }) %>
+      </div>
+      <footer>
+         <p class="smalltext"><%= it.copyright %></p>
+      </footer>
+   </body>
+</html>
